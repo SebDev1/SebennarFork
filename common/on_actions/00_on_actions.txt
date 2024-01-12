@@ -5023,7 +5023,6 @@ on_lock_hre_religion = {
 	events = {
 		religious_leagues.1
 		religious_leagues.8
-		religious_leagues.11
 	}
 }
 
@@ -5031,7 +5030,6 @@ on_change_hre_religion = {
 	events = {
 		religious_leagues.2
 		religious_leagues.3
-		religious_leagues.11
 	}
 }
 
@@ -17231,7 +17229,8 @@ on_defender_of_faith_claim = {
 
 on_hre_dismantled = {
 	#updates "Religion Triumphant" HRE modifiers
-	country_event = { id = religious_leagues.11 }
+	hidden_effect = { every_known_country = { country_event = { id = religious_leagues.11 } } }
+	country_event = { id = hre_event.15 }
 }
 
 on_new_age = {
