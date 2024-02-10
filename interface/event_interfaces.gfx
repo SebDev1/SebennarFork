@@ -5040,8 +5040,8 @@ spriteTypes = {
 		loadType = "INGAME"
 	}
 	spriteType = {
-		name = "GFX_spirit_huli_jing"
-		texturefile = "gfx//interface//spirits//spirit_huli_jing.dds"
+		name = "GFX_spirit_huszien"
+		texturefile = "gfx//interface//spirits//spirit_huszien.dds"
 		loadType = "INGAME"
 	}
 	spriteType = {
@@ -5081,3 +5081,4 @@ spriteTypes = {
 		loadType = "INGAME"
 	}
 }
+
