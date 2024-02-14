@@ -88,11 +88,13 @@ country_event = {
 		name = regent_court.2.a
 		highlight = yes
 		trigger = {
-			ai = no
-			NOT = {
-				AND = {
-					has_personal_deity = castellos
-					has_global_flag = castellos_is_dead_pantheonic_council
+			hidden_trigger = {
+				ai = no
+				NOT = {
+					AND = {
+						has_personal_deity = castellos
+						has_global_flag = castellos_is_dead_pantheonic_council
+					}
 				}
 			}
 		}
@@ -107,7 +109,7 @@ country_event = {
 				ruler_has_personality = just_personality
 				ruler_has_personality = well_advised_personality
 			}
-			NOT = { has_global_flag = "castellos_is_dead_pantheonic_council" }
+			hidden_trigger = { NOT = { has_global_flag = "castellos_is_dead_pantheonic_council" } }
 		}
 		ai_chance = {
 			factor = 1
@@ -142,7 +144,7 @@ country_event = {
 				ruler_has_personality = just_personality
 				ruler_has_personality = well_advised_personality
 			}
-			NOT = { has_global_flag = "castellos_is_dead_pantheonic_council" }
+			hidden_trigger = { NOT = { has_global_flag = "castellos_is_dead_pantheonic_council" } }
 		}
 		ai_chance = {
 			factor = 1
@@ -294,18 +296,20 @@ country_event = {
 	option = {
 		name = regent_court.2.n
 		trigger = {
-			has_global_flag = corins_ascension
+			hidden_trigger = {
+				has_global_flag = corins_ascension
+				OR = {
+					AND = {
+						NOT = { is_religion_enabled = corinite }
+						NOT = { has_global_flag = "crimson_deluge" }
+					}
+					has_global_flag = "upgraded_adean_admin"
+				}
+			}
 			NOT = {
 				ruler_has_personality = inspiring_leader_personality
 				ruler_has_personality = bold_fighter_personality
 				ruler_has_personality = zealot_personality
-			}
-			OR = {
-				AND = {
-					NOT = { is_religion_enabled = corinite }
-					NOT = { has_global_flag = "crimson_deluge" }
-				}
-				has_global_flag = "upgraded_adean_admin"
 			}
 		}
 		ai_chance = {
@@ -340,18 +344,20 @@ country_event = {
 		name = regent_court.2.n
 		highlight = yes
 		trigger = {
-			has_global_flag = corins_ascension
+			hidden_trigger = {
+				has_global_flag = corins_ascension
+				OR = {
+					AND = {
+						NOT = { is_religion_enabled = corinite }
+						NOT = { has_global_flag = "crimson_deluge" }
+					}
+					has_global_flag = "upgraded_adean_admin"
+				}
+			}
 			OR = {
 				ruler_has_personality = inspiring_leader_personality
 				ruler_has_personality = bold_fighter_personality
 				ruler_has_personality = zealot_personality
-			}
-			OR = {
-				AND = {
-					NOT = { is_religion_enabled = corinite }
-					NOT = { has_global_flag = "crimson_deluge" }
-				}
-				has_global_flag = "upgraded_adean_admin"
 			}
 		}
 		ai_chance = {
@@ -390,9 +396,11 @@ country_event = {
 				ruler_has_personality = martial_educator_personality
 				ruler_has_personality = strict_personality
 			}
-			NOT = {
-				has_global_flag = "upgraded_adean_war"
-				has_global_flag = "upgraded_adean_admin"
+			hidden_trigger = {
+				NOT = {
+					has_global_flag = "upgraded_adean_war"
+					has_global_flag = "upgraded_adean_admin"
+				}
 			}
 		}
 		ai_chance = {
@@ -432,9 +440,11 @@ country_event = {
 				ruler_has_personality = martial_educator_personality
 				ruler_has_personality = strict_personality
 			}
-			NOT = {
-				has_global_flag = "upgraded_adean_war"
-				has_global_flag = "upgraded_adean_admin"
+			hidden_trigger = {
+				NOT = {
+					has_global_flag = "upgraded_adean_war"
+					has_global_flag = "upgraded_adean_admin"
+				}
 			}
 		}
 		ai_chance = {
@@ -468,7 +478,7 @@ country_event = {
 	option = {
 		name = regent_court.2.f
 		trigger = {
-			NOT = { has_country_flag = upgraded_munas }
+			hidden_trigger = { NOT = { has_country_flag = upgraded_munas } }
 			NOT = {
 				ruler_has_personality = navigator_personality
 				ruler_has_personality = expansionist_personality
@@ -511,7 +521,7 @@ country_event = {
 		name = regent_court.2.f
 		highlight = yes
 		trigger = {
-			NOT = { has_country_flag = upgraded_munas }
+			hidden_trigger = { NOT = { has_country_flag = upgraded_munas } }
 			OR = {
 				ruler_has_personality = navigator_personality
 				ruler_has_personality = expansionist_personality
@@ -553,7 +563,7 @@ country_event = {
 	option = {
 		name = regent_court.2.f
 		trigger = {
-			has_country_flag = upgraded_munas
+			hidden_trigger = { has_country_flag = upgraded_munas }
 			NOT = {
 				ruler_has_personality = navigator_personality
 				ruler_has_personality = expansionist_personality
@@ -572,7 +582,7 @@ country_event = {
 		name = regent_court.2.f
 		highlight = yes
 		trigger = {
-			has_country_flag = upgraded_munas
+			hidden_trigger = { has_country_flag = upgraded_munas }
 			OR = {
 				ruler_has_personality = navigator_personality
 				ruler_has_personality = expansionist_personality
@@ -687,7 +697,7 @@ country_event = {
 	option = {
 		name = regent_court.2.h
 		trigger = {
-			NOT = { has_country_flag = upgraded_balgar } #For Khughdhir, Hammerhome and Silverforge mission trees
+			hidden_trigger = { NOT = { has_country_flag = upgraded_balgar } } #For Khughdhir, Hammerhome and Silverforge mission trees
 			NOT = {
 				ruler_has_personality = architectural_visionary_personality
 				ruler_has_personality = industrious_personality
@@ -726,7 +736,7 @@ country_event = {
 		name = regent_court.2.h
 		highlight = yes
 		trigger = {
-			NOT = { has_country_flag = upgraded_balgar } #For Khughdhir, Hammerhome and Silverforge mission trees
+			hidden_trigger = { NOT = { has_country_flag = upgraded_balgar } } #For Khughdhir, Hammerhome and Silverforge mission trees
 			OR = {
 				ruler_has_personality = architectural_visionary_personality
 				ruler_has_personality = industrious_personality
@@ -764,7 +774,7 @@ country_event = {
 	option = {
 		name = regent_court.2.h
 		trigger = {
-			has_country_flag = upgraded_balgar
+			hidden_trigger = { has_country_flag = upgraded_balgar }
 			NOT = {
 				ruler_has_personality = architectural_visionary_personality
 				ruler_has_personality = industrious_personality
@@ -803,7 +813,7 @@ country_event = {
 		name = regent_court.2.h
 		highlight = yes
 		trigger = {
-			has_country_flag = upgraded_balgar
+			hidden_trigger = { has_country_flag = upgraded_balgar }
 			OR = {
 				ruler_has_personality = architectural_visionary_personality
 				ruler_has_personality = industrious_personality
@@ -928,7 +938,7 @@ country_event = {
 	option = {
 		name = regent_court.2.j
 		trigger = {
-			NOT = { has_country_flag = upgraded_ryala }
+			hidden_trigger = { NOT = { has_country_flag = upgraded_ryala } }
 			NOT = {
 				ruler_has_personality = calm_personality
 				ruler_has_personality = careful_personality
@@ -963,7 +973,7 @@ country_event = {
 		name = regent_court.2.j
 		highlight = yes
 		trigger = {
-			NOT = { has_country_flag = upgraded_ryala }
+			hidden_trigger = { NOT = { has_country_flag = upgraded_ryala } }
 			OR = {
 				ruler_has_personality = calm_personality
 				ruler_has_personality = careful_personality
@@ -997,7 +1007,7 @@ country_event = {
 	option = {
 		name = regent_court.2.j
 		trigger = {
-			has_country_flag = upgraded_ryala
+			hidden_trigger = { has_country_flag = upgraded_ryala }
 			NOT = {
 				ruler_has_personality = calm_personality
 				ruler_has_personality = careful_personality
@@ -1032,7 +1042,7 @@ country_event = {
 		name = regent_court.2.j
 		highlight = yes
 		trigger = {
-			has_country_flag = upgraded_ryala
+			hidden_trigger = { has_country_flag = upgraded_ryala }
 			OR = {
 				ruler_has_personality = calm_personality
 				ruler_has_personality = careful_personality
@@ -1149,7 +1159,7 @@ country_event = {
 	option = {
 		name = regent_court.2.l
 		trigger = {
-			NOT = { has_country_flag = upgraded_falah }
+			hidden_trigger = { NOT = { has_country_flag = upgraded_falah } }
 			NOT = {
 				ruler_has_personality = tactical_genius_personality
 				ruler_has_personality = incorruptible_personality
@@ -1192,7 +1202,7 @@ country_event = {
 		name = regent_court.2.l
 		highlight = yes
 		trigger = {
-			NOT = { has_country_flag = upgraded_falah }
+			hidden_trigger = { NOT = { has_country_flag = upgraded_falah } }
 			OR = {
 				ruler_has_personality = tactical_genius_personality
 				ruler_has_personality = incorruptible_personality
@@ -1234,7 +1244,7 @@ country_event = {
 		option = {
 			name = regent_court.2.l
 			trigger = {
-				has_country_flag = upgraded_falah
+				hidden_trigger = { has_country_flag = upgraded_falah }
 				NOT = {
 					ruler_has_personality = tactical_genius_personality
 					ruler_has_personality = incorruptible_personality
@@ -1277,7 +1287,7 @@ country_event = {
 			name = regent_court.2.l
 			highlight = yes
 			trigger = {
-				has_country_flag = upgraded_falah
+				hidden_trigger = { has_country_flag = upgraded_falah }
 				OR = {
 					ruler_has_personality = tactical_genius_personality
 					ruler_has_personality = incorruptible_personality
@@ -1476,7 +1486,7 @@ country_event = {
 	option = {
 		name = regent_court.2.e
 		trigger = {
-			has_global_flag = "upgraded_adean_admin"
+			hidden_trigger = { has_global_flag = "upgraded_adean_admin" }
 			NOT = {
 				ruler_has_personality = righteous_personality
 				ruler_has_personality = martial_educator_personality
@@ -1527,7 +1537,7 @@ country_event = {
 		name = regent_court.2.e
 		highlight = yes
 		trigger = {
-			has_global_flag = "upgraded_adean_admin"
+			hidden_trigger = { has_global_flag = "upgraded_adean_admin" }
 			OR = {
 				ruler_has_personality = righteous_personality
 				ruler_has_personality = martial_educator_personality
@@ -1577,7 +1587,7 @@ country_event = {
 	option = {
 		name = regent_court.2.e
 		trigger = {
-			has_global_flag = "upgraded_adean_war"
+			hidden_trigger = { has_global_flag = "upgraded_adean_war" }
 			NOT = {
 				ruler_has_personality = righteous_personality
 				ruler_has_personality = martial_educator_personality
@@ -1616,7 +1626,7 @@ country_event = {
 		name = regent_court.2.e
 		highlight = yes
 		trigger = {
-			has_global_flag = "upgraded_adean_war"
+			hidden_trigger = { has_global_flag = "upgraded_adean_war" }
 			OR = {
 				ruler_has_personality = righteous_personality
 				ruler_has_personality = martial_educator_personality
@@ -1768,11 +1778,13 @@ country_event = {
 		name = regent_court.2.a
 		highlight = yes
 		trigger = {
-			ai = no
-			NOT = {
-				AND = {
-					has_personal_deity = castellos
-					has_global_flag = castellos_is_dead_pantheonic_council
+			hidden_trigger = {
+				ai = no
+				NOT = {
+					AND = {
+						has_personal_deity = castellos
+						has_global_flag = castellos_is_dead_pantheonic_council
+					}
 				}
 			}
 		}
