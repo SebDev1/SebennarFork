@@ -7185,6 +7185,15 @@ province_event = {
 		ai_chance = {
 			factor = 1
 		}
+		if = {
+			limit = {
+				province_has_center_of_trade_of_level = 1
+				NOT = {
+					province_has_center_of_trade_of_level = 3
+				}
+			}
+			add_center_of_trade_level = 1
+		}
 		owner = {
 			add_treasury = 500
 			add_dip_power = 50
