@@ -10310,6 +10310,7 @@ castanor_5_missions_succession_war = {
 		}
 		
 		trigger = {
+			NOT = { has_country_modifier = slackening_modifier }
 			has_disaster = castanor_succession_war
 			all_owned_province = {
 				controlled_by = ROOT
@@ -10409,6 +10410,7 @@ castanor_2_missions_succession_war_patrician = {
 		provinces_to_highlight = { }
 		
 		trigger = {
+			NOT = { has_country_modifier = slackening_modifier }
 			has_disaster = castanor_succession_war
 			mil_power = 100
 		}
@@ -10548,6 +10550,7 @@ castanor_3_missions_succession_war_patrician = {
 		}
 		
 		trigger = {
+			NOT = { has_country_modifier = slackening_modifier }
 			has_disaster = castanor_succession_war
 			all_owned_province = {
 				controlled_by = ROOT
