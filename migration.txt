@@ -6,4 +6,7 @@ marrhold fix
 a lot.... (mostly provinces changes and some other thingies)
 
 date done up to to- 5apr2024
-todo: (ovdal tungr missions got migrated before commits for them)
+todo: 
+ovdal tungr missions got migrated before commits for them
+country ideas 
+localisation for racial modifiers
