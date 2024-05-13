@@ -4948,6 +4948,7 @@ oak_monarchy_reform = {
 	custom_attributes = {
 		locked_government_type = yes
 		heir = no
+		queen = no
 		cyranvar_special_election = yes
 	}
 }

@@ -4044,7 +4044,7 @@ fey_religion = {
 		color = { 45 157 173 }
 		icon = 101
 		country = {
-			mages_loyalty_modifier = 0.1
+			church_loyalty_modifier = 0.1
 			advisor_cost = -0.2
 		}
 		country_as_secondary = {
@@ -7020,7 +7020,7 @@ amadian_religion = {
 		}
 
 		on_convert = {
-			change_religion = rioqay_diu
+			change_religion = rioquay_diu
 			add_prestige = -100
 
 			add_country_modifier = {
