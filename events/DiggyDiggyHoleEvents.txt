@@ -2299,10 +2299,10 @@ country_event = {
         define_general = {
             name = "Goblinsbane"
             trait = ruthless_personality
-            shock = 9
+            shock = 10
             fire = 6
             manuever = 8
-            siege = 4
+            siege = 6
 		}
         add_country_modifier = {
 			name = legacy_of_goblinsbane

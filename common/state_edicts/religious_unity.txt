@@ -4,7 +4,7 @@ edict_religious_unity = {
 	}
 	
 	allow = {
-		NOT = { has_country_flag = disable_all_state_edicts_bool }
+		always = yes
 	}
 	
 	modifier = {
