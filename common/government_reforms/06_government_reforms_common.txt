@@ -330,7 +330,7 @@ penal_colonies_reform = {
 		}
 	}
 	trigger = {
-		has_idea_group = exploration_ideas
+		has_idea_group = expansion_ideas
 	}
 	modifiers = {
 		expel_minorities_cost = -1
@@ -2530,8 +2530,8 @@ anbennar_T5_generic_fodder = {
 	trigger = {
 	}
 	modifiers = {
-		cav_to_inf_ratio = 0.1
-		cavalry_cost = -0.1
+		cavalry_cost = -0.10
+		drill_decay_modifier = -0.15
 	}
 	
 	ai = {
@@ -3195,48 +3195,9 @@ anbennar_T5_ruinborn_cav_quality = {
 		}
 	}
 	modifiers = {
-		#Positive
-		cavalry_power = 0.15
-		cavalry_shock = 0.15
-		#Negative
-		fire_damage_received = 0.05
-	}
-	
-	ai = {
-		factor = 1
-	}
-}
-
-anbennar_T5_ruinborn_cav_quantity = {
-	icon = "ruinborn_cavalry_quanitity"
-	allow_normal_conversion = yes
-	potential = {
-		NOT = { has_adventurer_reform = yes }
-		has_country_modifier = ruinborn_military
-	}
-	trigger = {
-		OR = {
-			culture_group = devandi_ruinborn_elf
-			culture_group = eltibhari_ruinborn_elf
-			culture_group = harafic_ruinborn_elf
-			custom_trigger_tooltip = {
-				tooltip = T5_ruinborn_tt
-				OR = {
-					has_devandi_ruinborn_accepted_culture = yes
-					has_elthibari_ruinborn_accepted_culture = yes
-					has_harafic_ruinborn_accepted_culture = yes
-				}
-			}
-		}
-	}
-	modifiers = {
-		#Positive
-		cav_to_inf_ratio = 0.1
-		movement_speed = 0.1
-		cavalry_cost = -0.2
-		#Negative
-		artillery_power = -0.05
-		recover_army_morale_speed = -0.05
+		mercenary_cost = -0.25
+		possible_condottieri = 0.5
+		merc_leader_army_tradition = 0.25
 	}
 	
 	ai = {
@@ -5581,7 +5542,6 @@ new_world_exploitation_reform = {
 	trigger = {
 		OR = {
 			full_idea_group = expansion_ideas
-			full_idea_group = exploration_ideas
 		}
 		if = {
 			limit = {
@@ -5753,7 +5713,7 @@ war_economy_reform = {
 	}
 	modifiers = {
 		war_taxes_cost_modifier = -0.5
-		global_regiment_cost = -0.1
+		global_regiment_cost = -0.05
 		global_ship_cost = -0.1
 	}
 	ai = {

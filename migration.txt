@@ -7,6 +7,9 @@ a lot.... (mostly provinces changes and some other thingies)
 
 date done up to to- 5apr2024
 todo: 
+gov reforms
 ovdal tungr missions got migrated before commits for them
 country ideas 
+generic missions
+map (map folder)
 localisation for racial modifiers
