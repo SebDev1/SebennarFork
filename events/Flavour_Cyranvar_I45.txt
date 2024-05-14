@@ -636,6 +636,12 @@ country_event = {
 	}
 	
 	trigger = {
+		OR = {		
+			tag = I45
+			was_tag = I45
+			tag = Z87
+			was_tag = Z87
+		}
 		OR = {
 			6242 = { has_discovered = root }
 			6243 = { has_discovered = root }

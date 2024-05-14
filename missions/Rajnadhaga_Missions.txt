@@ -135,6 +135,7 @@ rajnadhaga_slaves = {
 		}
 		
 		trigger = {
+			NOT = { has_country_modifier = slackening_modifier }
 			barracks = 5
 			years_of_income = 1
 			any_owned_province = {

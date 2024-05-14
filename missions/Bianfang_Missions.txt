@@ -168,6 +168,7 @@ bianfang_missions_1 = {
 		}
 		
 		trigger = {
+			NOT = { has_country_modifier = slackening_modifier }
 			if = {
 				limit = { has_dlc = "Cradle of Civilization" }
 				army_professionalism = 0.4
@@ -308,6 +309,7 @@ bianfang_missions_2 = {
 		}
 		
 		trigger = {
+			NOT = { has_country_modifier = slackening_modifier }
 			if = {
 				limit = { has_dlc = "Cradle of Civilization" }
 				army_professionalism = 0.2
@@ -1047,6 +1049,7 @@ bianfang_liang_missions_1 = {
 		}
 		
 		trigger = {
+			NOT = { has_country_modifier = slackening_modifier }
 			if = {
 				limit = { has_dlc = "Cradle of Civilization" }
 				army_professionalism = 0.75
@@ -1080,6 +1083,7 @@ bianfang_liang_missions_1 = {
 		
 		
 		trigger = {
+			NOT = { has_country_modifier = slackening_modifier }
 			OR = {
 				full_idea_group = quantity_ideas
 				full_idea_group = quality_ideas
@@ -1727,6 +1731,7 @@ bianfang_liang_missions_3 = {
 		
 		
 		trigger = {
+			NOT = { has_country_modifier = slackening_modifier }
 			manpower_percentage = 1
 			num_of_owned_provinces_with = {
 				value = 20
@@ -2471,6 +2476,7 @@ bianfang_liang_missions_2_second = {
 		
 		
 		trigger = {
+			NOT = { has_country_modifier = slackening_modifier }
 			4630 = {
 				has_courthouse_building_trigger = yes
 				development = 30

@@ -2378,6 +2378,7 @@ economy_branch = {
 			}
 		}
 		trigger = {
+			NOT = { has_country_modifier = slackening_modifier }
 			num_of_owned_provinces_with = {
 				value = 5
 				NOT = {
